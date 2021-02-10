@@ -40,9 +40,55 @@ Built-in data types include:
    - `float` - floating point number
    - `double` - double-precision version of float
    - `char` - a single character in **single quotes**
-   - `bool` - boolean values, **true** or **false**
+   - `bool` - Boolean values, **true** or **false**
    - `string` - sequence of characters in **double quotes**
 
 ### Chapter-3: Your First Program
 
+For learning the fundamentals C#, the first program will be a **console application** which uses a text-only interface. A C# console application must contain a **method** named **Main** (the starting point). Running this program will display *Hello World!* in the console.
+> **<ins>Important Note</ins>**: for the purpose of saving space, we will assume from now on that all code is contained in the `Main` method.
+```c#
+using System;
+
+namespace MyFirstProgram
+{
+   class Program
+   {
+      static void Main(string[] args)
+      {
+         string sayHello = "Hello World!";
+         Console.WriteLine(sayHello);
+      }
+   }
+}
+```
+### Chapter-4: Displaying Output
+
+There are two main ways to display **output** to the console. The method `Console.Write()` will print its contents to the console and `Console.WriteLine()` will print its contents with a line terminator.
+
+   ```c#
+   int x = 10;
+   int y = 20;
+
+   Console.WriteLine("x = {0}, y = {1}", x, y);
+
+   // outputs --> x = 10, y = 20
+   ```
+As you can see, the placeholder `{0}` in the string is replaces with the value of `x` and `{1}` is replaced with the value of `y`, respectively.  You can use an unlimited number of placeholders.
+
+### Chapter-5: User Input
+
+You can prompt a user to enter data by displaying a message using the `Console.WriteLine()` method, then using the `Console.ReadLine()` method to assign the input to a `string` value. Note that the `Console.ReadLine()` method takes no arguments in the parentheses, and all data collected comes in as a `string`. To overcome this, the data type can be converted using one of the following:
+   - `Convert.ToInt32` - bit size integers available (16, 32, 64)
+   - `Convert.ToDouble`
+   - `Convert.ToBoolean`
+
+This example of user input with conversion prompts the user by asking their age, converts the age from a string to an integer, then displays their age.:
+   ```c#
+   Console.WriteLine("How old are you?");
+   int age = Convert.ToInt32(Console.ReadLine());
+   Console.WriteLine("You are {0} years old", age);
+   ```
+
+### Chapter-6: Comments
 
