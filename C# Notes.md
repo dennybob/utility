@@ -202,7 +202,7 @@ int y = x++;
 
 ### __The `if`-`else` Statement__
 
-The `if` statement executes code when the *condition* evaluates true. The `else` clause is optional and is run only if the condition evaluates as false. Multiple `else` clauses can follow an `if` statement, and `if`/`else` statements can be nested within an `if` statement multiple times.
+The `if` statement executes code when the *condition* evaluates true. Multiple `else if` clauses can follow an `if` statement and likewise execute code when evaluated true. The `else` clause is optional and is run only if all of the previous conditions evaluate as false. Multiple `if` statements can be nested within an `if` statement.
 
 ```c#
 if (x > y) {
