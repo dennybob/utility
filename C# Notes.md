@@ -29,20 +29,20 @@ It is good practice to use variable names that are descriptive in order to make 
 
 #### <ins>Variable Data Types</ins>
 
-A data type defines the type information that can be stored in a variable, the amount of memory needed, and the operations that can be performed with the variable. Variables must be declared before assigning a value:
+A data type defines the type information that can be stored in a variable, the amount of memory needed, and the operations that can be performed with the variable. Variables must be declared before assigning a value...
 
 ```c#
 int myAge;
 myAge = 18;
 ```
 
-or they can be assigned when declared:
+or they can be assigned when declared...
 
 ```c#
 int myAge = 18;
 ```
 
-Built-in data types include:
+Built-in data types include...
 
    - `int` - an integer number
    - `float` - floating point number
@@ -90,13 +90,13 @@ As you can see, the placeholder `{0}` in the string is replaces with the value o
 
 ### __User Input__
 
-You can prompt a user to enter data by displaying a message using the `Console.WriteLine()` method, then using the `Console.ReadLine()` method to assign the input to a `string` value. Note that the `Console.ReadLine()` method takes no arguments in the parentheses, and all data collected comes in as a `string`. To overcome this, the data type can be converted using one of the following:
+You can prompt a user to enter data by displaying a message using the `Console.WriteLine()` method, then using the `Console.ReadLine()` method to assign the input to a `string` value. Note that the `Console.ReadLine()` method takes no arguments in the parentheses, and all data collected comes in as a `string`. To overcome this, the data type can be converted using one of the following.
 
    - `Convert.ToInt32` - bit size integers available (16, 32, 64)
    - `Convert.ToDouble`
    - `Convert.ToBoolean`
 
-This example of user input with conversion prompts the user by asking their age, converts the age from a string to an integer, then displays their age.:
+The following example of user input with conversion prompts the user by asking their age, converts the age from a string to an integer, then displays their age.
 
 ```c#
 Console.WriteLine("How old are you?");
@@ -168,8 +168,8 @@ x %= 2; // equivalent to x = x % 2
 __Increment__ and __decrement__ operators change the value respectively.
 
 ```c#
-x++; //equivalent to x = x + 1
-x--; //equivalent to x = x - 1
+x++; // equivalent to x = x + 1
+x--; // equivalent to x = x - 1
 ```
 
 They can be used in either __prefix__ or __postfix__ manners, and can _stand alone_ or be used in an _assignment_.
@@ -178,11 +178,13 @@ They can be used in either __prefix__ or __postfix__ manners, and can _stand alo
    - postfix: evaluated the expression, then increments the value
 
 ```c#
-++x; //prefix
-x++; //postfix
+++x; // prefix increment
+--x; // prefix decrement
+x++; // postfix increment
+x--; // postifx increment
 ```
 
-Examples of useage...
+Examples of usage with multiple variables...
 
 ```c#
 int x = 3;
@@ -196,3 +198,47 @@ int y = x++;
 // x is 4, y is 3
 ```
 
+## Conditionals & Loops
+
+### __The `if`-`else` Statement__
+
+The `if` statement executes code when the *condition* evaluates true. The `else` clause is optional and is run only if the condition evaluates as false. Multiple `else` clauses can follow an `if` statement, and `if`/`else` statements can be nested within an `if` statement multiple times.
+
+```c#
+if (x > y) {
+   Console.WriteLine("x is greater than y");
+}
+else if (x == y) {
+   Console.WriteLine("x is y");
+   }
+else {
+   Console.WriteLine("x is less than y");
+}
+```
+
+> [SharpLab - Example of if, else if, and else](https://sharplab.io/#v2:EYLgHgbALANALiATgVwHYwCYgNQB8ACATAIwCwAUPgMwAERdxA7DQN4U0c0D0AVO5zR40AomACGAWwAOAGwCmNAPYAzGgEtlMGnJkBnBRq1jUGbXrn9OPLpbqFCrWwKec1qODTA0AvDWIBuFw43DwBPHxpCQPIBZxjY4NUACi8APhpQgEpHeISBfGIATiSAIi81XRoAc0Q5MTg5RBo4AAtjDJLM6LyaAF8gs311ZK9vXyycnvyi0vLK0M7uvP7c2J0htlWeguKy9Ur5XUrW9oWugZWBFd6gA) 
+
+### __The `switch` Statement__
+
+Left off here......................................
+
+### __The `while` Loop__
+
+
+### __The `for` Loop__
+
+
+### __The `do`-`while` Loop__
+
+
+### __The `break` and `continue` Keywords__
+
+
+### __Logical Operators__
+
+
+### __The Conditional Operator__
+
+## Methods
+
+> [SharpLab - Example of method overloading](https://sharplab.io/#v2:EYLgHgbALANALiATgVwHYwCYgNQB8ACATAIwCwAUPgMwAERdxA7DQN4U0c0D0AVO5zR40AomACGAWwAOAGwCmNAPYAzGhLlwAFooxKAbnMQzFYjAEtUAc36ceXG3UKFWDgQAVEFuAApixAJQA3K6cHl7eUAB0xFRBIRxhqD4ARPjEAAw0AGQ0XiA0yTA0jJEArIxx5AIAvg7UDBB0UDSJPl40Yv4uVQKcaQCc3sl5BTTYHZU1dbRpjfjNrd4YisjA8hPdvX3Eg8nLq/L5yWMTwT0cted0M8RzC55J3mmZMmLAcjJF+2sKnZtbDEGr3eMhOnTOU3I1SAA) 
