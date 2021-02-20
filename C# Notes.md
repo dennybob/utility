@@ -118,7 +118,7 @@ Comments help explain parts of code and are ignored by the compiler.
 
 ### __The `var` Keyword__
 
-Variables are typically __explicitly typed__ (`int`, `double`, `string`, etc.) when they are declared.  The `var` keyword declares variables __implicitly typed__. The compiler determines the type based on the expression assigned to it. Implicitly typed variables must be initialized with a value.
+Variables are typically **explicitly typed** (`int`, `double`, `string`, etc.) when they are declared.  The `var` keyword declares variables **implicitly typed**. The compiler determines the type based on the expression assigned to it. Implicitly typed variables must be initialized with a value.
 
 ```c#
 int num1; // explicitly typed variable
@@ -136,14 +136,14 @@ const double PI = 3.1415927;
 
 ### __Arithmetic Operators__
 
-An __ arithmetic operator__ is a symbol that performs mathematical manipulations.  The standard mathematical operators and order of operations apply, including the use of parentheses.
+An **arithmetic operator** is a symbol that performs mathematical manipulations.  The standard mathematical operators and order of operations apply, including the use of parentheses.
 
-   1) Parentheses **( )**
+   1) Parentheses __( )__
    2) Multiplicative __*__, __/__, __%__
    3) Additive __+__, __-__
    4) Then, left to right...
 
- There is an additional operator called __modulus__ `%` which returns the remainder of integer division.
+ There is an additional operator called **modulus** `%` which returns the remainder of integer division.
 
 ```c#
 int x = 25 % 7; // returns 4
@@ -151,9 +151,9 @@ int x = 25 % 7; // returns 4
 
 ### __Assignment Operators__
 
-As seen in previous examples, the __assignment operator__ `=` assigns the value (right) to the variable (left).
+As seen in previous examples, the **assignment operator** `=` assigns the value (right) to the variable (left).
 
-There are __compound assignment operators__ which perform an operation and assignment in one statement; a kind of short hand.
+There are **compound assignment** operators which perform an operation and assignment in one statement; a kind of short hand.
 
 ```c#
 x += 2; // equivalent to x = x + 2
@@ -172,7 +172,7 @@ x++; // equivalent to x = x + 1
 x--; // equivalent to x = x - 1
 ```
 
-They can be used in either __prefix__ or __postfix__ manners, and can _stand alone_ or be used in an _assignment_.
+They can be used in either **prefix** or **postfix** manners, and can *stand alone* or be used in an *assignment*.
 
    - prefix: increments the value, then evaluated the expression
    - postfix: evaluated the expression, then increments the value
@@ -202,7 +202,7 @@ int y = x++;
 
 ### __The `if`-`else` Statement__
 
-The `if` statement executes code when the *condition* evaluates true. Multiple `else if` clauses can follow an `if` statement and likewise execute code when evaluated true. The `else` clause is optional and is run only if all of the previous conditions evaluate as false. Multiple `if` statements can be nested within an `if` statement.
+The `if` statement executes code when the condition evaluates true. Multiple `else if` clauses can follow an `if` statement and likewise execute code when evaluated true. The `else` clause is optional and is run only if all of the previous conditions evaluate as false. Multiple `if` statements can be nested within an `if` statement.
 
 ```c#
 if (x > y) {
@@ -220,13 +220,53 @@ else {
 
 ### __The `switch` Statement__
 
-Left off here......................................
+The `switch` statement provides a structured way to test a variable against many conditions. Each condition is called a `case`, and each case uses the `break` keyword to exit the case. The optional `default` case is executed when none of the previous cases match.
+
+```c#
+int age = 65;
+switch (age) {
+   case 16:
+      Console.WriteLine("You can drive at {0} years old.", age);
+      break;
+   case 18:
+      Console.WriteLine("You can vote at {0} years old.", age);
+      break;
+   case 21:
+      Console.WriteLine("You can drink at {0} years old.", age);
+      break;
+   default:
+      Console.WriteLine("You are {0} years old", age):
+      break;
+}
+```
+
+> [SharpLab - Example of switch](https://sharplab.io/#v2:EYLgHgbALANALiATgVwHYwCYgNQB8ACATAIwCwAUPgMwAERdxA7DQN4U0c0D0AVO5zR40AomACGAWwAOAGwCmNAPYAzGgGcA7gEs4AYwAW/Tjy5G6hQqzMCtqODTEBzBQF4aUAKwBua5006DGgAKJzkASityAWiOXTE1BWIIEF8YjnxiAE4ggCIATUVkGjjUGgxELQA3BTF7FgAGAF8aAE85MUQ1JRkMADocmAdnMJ8otJjgRHaAa1HxzjiEmmIADhSx+c4M7PzC4rFSysU4Grqm1vbO7r6BofC5zc5JmYf5xYUSdcetrNyCopKZQqqGmDjOzTaHS6ih6/UGoRGqTSzzEsyRAgwcmUYmQMgQ6Oi2z+ew6CgaEMu0J6twRr0eKLRG2ijTMLPIjSAA) 
 
 ### __The `while` Loop__
 
+A `while` loop will continually execute the blocks of code in the **loop body** while a given condition is evaluated as **true**. Without a statement that eventually evaluates as **false**, the loop with continue indefinitely. The **compound arithmetic** operators can be used to manipulate the number of times a loop runs.
+
+```c#
+int num = 1;
+while (num < 10) {
+   Console.WriteLine(num);
+   num+=2;
+}
+```
+
+> [SharpLab - Example of while](https://sharplab.io/#v2:EYLgHgbALANALiATgVwHYwCYgNQB8ACATAIwCwAUPgMwAERdxA7DQN4U0c0D0AVO5zR40AomACGAWwAOAGwCmNAPYAzGgHcAFgEt5/Tjy566hQqyMCtqODVTIJNALw1iAbnOdNOhQApb9gDzOAAwAlGbkApEc+MQAnL52IW4RUQJ+2A6Eyak0AL5G+eS5QA=)
 
 ### __The `for` Loop__
 
+The `for` statement also executes the blocks of code in the loop body while the given condition evaluates as **true**. It counts loops using an **initializer**, **condition**, and **iterator** . The variable declared for iteration (`i` in the example) is not global.
+
+```c#
+for (int i=1; i<=10; i++) {
+   Console.WriteLine(i);
+}
+```
+
+> [SharpLab - Example of for](https://sharplab.io/#v2:EYLgHgbALANALiATgVwHYwCYgNQB8ACATAIwCwAUPgMwAERdxA7DQN4U0c0D0AVO5zR40AomACGAWwAOAGwCmNAPYAzGssWJ+nHly11ChVnoHrENABQBLVHBqWAvMQDcdgDyOADC8vZsASiNyTnxiAE4rPycKAF89WPJooA=)
 
 ### __The `do`-`while` Loop__
 
