@@ -270,14 +270,81 @@ for (int i=1; i<=10; i++) {
 
 ### __The `do`-`while` Loop__
 
+The `do-while` loop is similar to the `while` loop, except that it will execute at least one time. It places to "do this" part before the condition. Note the semicolon after the while statement.
+
+```c#
+int x = 42;
+do {
+   Console.WriteLine(x);
+   x++;
+} while(x < 10);
+// prints 42
+```
+
+> [SharpLab - Example of do-while](https://sharplab.io/#v2:EYLgHgbALANALiATgVwHYwCYgNQB8ACATAIwCwAUPgMwAERdxA7DQN4U0c0D0AVO5zR40AomACGAWwAOAGwCmNAPYAzGhkUBaAO4ALAJbz+nHlyN1ChVmYF7UcGmBoBeGlEIBua53VXyA/xz4xACcABRgAJSefgECYNjY0bE0AL40ugZy4TQAPDTEAAxRZikUKUA)
 
 ### __The `break` and `continue` Keywords__
 
+The `break` keyword, as we saw in the `switch` statement, can also be used to terminate loop statements like `while` and `for`.
+
+```c#
+int num = 0;
+while (num < 20)
+{
+   if (num == 5)
+      break;
+   Console.WriteLine(num);
+   num++;
+}
+// starts to print lines from 0 to 20 but stops after printing 4
+```
+
+> [SharpLab - Example of break](https://sharplab.io/#v2:EYLgHgbALANALiATgVwHYwCYgNQB8ACATAIwCwAUPgMwAERdxA7BQN4U0c0D0AVO5zR40AomACGAWwAOAGwCmNAPYAzGsERyxAa36ceXXXUKFDbcgIEBLVHBqpkEmgF4aABgDchgQHcAFpfkaAAp7RwAeGkJXAEovTjMLRMtVEIdnFwBWWPNE3LUNbXdOOIt8YgBOVIlozxy8uwdsbFq8gF9DdvJWoA=)
+
+The `continue` keyword can be used to skip the current iteration of a loop, and continues with the next iteration.
+
+```c#
+for (int i = 0; i < 10; i++)
+{
+   if (i == 5)
+      continue;
+   Console.WriteLine(i);
+}
+// prints 0 to 9 but skips 5
+```
+
+> [SharpLab - Example of continue](https://sharplab.io/#v2:EYLgHgbALANALiATgVwHYwCYgNQB8ACATAIwCwAUPgMwAERdxA7BQN4U0c0D0AVO5zR40AomACGAWwAOAGwCmNAPYAzGgGNFqOAEtUyOf048uhuoUKm25AQOWLENABS64NbTQC8NAAwBuNzQAPDTEfm7Y2ACUpgJWNvFuqs6eXgCs0dYJWRpauvq+MQn4xACczpEFmfEAvqa15NVAA==)
 
 ### __Logical Operators__
 
+Logical operators are used to join multiple expressions and return `true` or `false`.
+
+   - `&&` ---AND: both operands must be true
+   - `||` ---OR: if any one of the operands are true
+   - `!`  ---NOT: reverses the logic of a single operand
+
+```c#
+int age = 18;
+int score = 75;
+        
+// AND x3
+if (age > 16 && age < 80 && score > 50)
+   Console.WriteLine("age is greater than 16 AND age is less than 80 AND score is greater than 50");
+        
+// OR
+if (age > 21 || score > 50)
+   Console.WriteLine("age is greater than 21 OR score is greater than 50");
+        
+// NOT
+if ( !(age < 18))
+   Console.WriteLine("age is NOT less than 16");
+```
+
+> [SharpLab - Example of logical operators](https://sharplab.io/#v2:EYLgHgbALANALiATgVwHYwCYgNQB8ACATAIwCwAUPgMwAERdxA7BQN4U0c0D0AVO5zR40AomACGAWwAOAGwCmNAPYAzGjMUBzAJYBjMTKVS5iMXEWIAzv048u1uoUL225AQK2o4NMRoUBeGmIADgBue3dPGgsdc38aRgBWMNc3DnDOLi4aAEEAOQARGjAqdI4tVQAKHwUAPkCIGgAyRu9fGgAeGiCABiaW6NiaOoTugEpSt3xiAE4KgCIK4lHWhS0LGg1EOVNjGjgACzFUepyClZo1tTkLdYOjrt68woGti/XN7bhdu+ORudHkqk0ilUpkaAB5ABKE3KNCqbTqJBouFwURir2GYwmAimswWhGW1TeGy2O0Qe0OxyRULRg0uHzJFPufwBEwmYNy4IAKjDKjQAITwhSdYKjcYgoEcXHzCpUQltS6crlXG5M47ECD/QGcAC+FB1QA==)
 
 ### __The Conditional Operator__
+
+
 
 ## Methods
 
