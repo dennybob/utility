@@ -23,3 +23,6 @@
   - [ ] Develop macro
   - [ ] Find appropriate G-code for execution (if it works with modal call)
     - For all Fanuc mills (Kasuga, Mori, Doosan)
+  - [ ] Debug
+  - [ ] Case testing
+  - [ ] Create documention (doc.md)
