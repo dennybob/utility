@@ -48,9 +48,12 @@ prog = [x.replace('#8', '.5') for x in prog]
 # Change '#9' to '1.'
 prog = [x.replace('#9', '1.') for x in prog]
 
+# Insert 'G91' before first line
+prog.insert(0, 'G91 Y1.')
+
 # Print program
-for line in prog:
-    print(line)
+#for line in prog:
+#    print(line)
 
 # Save program to a file
 with open('/Users/dennybob/Documents/GitHub/utility/dev/engrave macro/simCode.nc', 'w') as file:

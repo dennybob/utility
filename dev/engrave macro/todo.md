@@ -8,16 +8,16 @@
 
 ## To Do
   - [X] Decide which font to use
-  - [ ] Create Python script to build simulator file
-      - [ ] Use existing simulator.nc as sample
-      - [ ] Remember these concepts
+  - [X] Create Python script to build simulator file
+      - [X] Use existing simulator.nc as sample
+      - [X] Remember these concepts
         - Heading
         - Remove GOTO lines
         - Replace "#26" with ".1:
         - Remove other "#" words (optional)
         - Some moves, such as arcs, need tweeking to make sim work
   - [ ] Program characters
-    - [ ] Uppercase alphabet (A-Z)
+    - [X] Uppercase alphabet (A-Z)
     - [ ] Numbers (0-9)
     - [ ] Other
       - octothorpe "#"
