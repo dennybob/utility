@@ -18,8 +18,8 @@
         - Some moves, such as arcs, need tweeking to make sim work
   - [ ] Program characters
     - [X] Uppercase alphabet (A-Z)
-    - [ ] Numbers (0-9)
-    - [ ] Other
+    - [X] Numbers (0-9)
+    - [X] Other
       - octothorpe "#"
       - ampersand "&"
       - dash "-"
